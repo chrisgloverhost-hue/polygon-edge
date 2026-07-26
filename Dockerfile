@@ -1,14 +1,14 @@
 # ─── Stage 1: Build ───────────────────────────────────────────────────────────
-FROM golang:1.21-alpine AS builder
+FROM golang:1.22-alpine AS builder
 
 RUN apk add --no-cache git bash
 
 WORKDIR /app
 COPY go.mod go.sum ./
-RUN GOPROXY=direct GONOSUMDB=* go mod download
+RUN go mod download
 
 COPY . .
-RUN GOPROXY=direct GONOSUMDB=* go build -o polygon-edge \
+RUN go build -o polygon-edge \
     -ldflags="-X 'github.com/0xPolygon/polygon-edge/versioning.Version=v1.0.0' \
               -X 'github.com/0xPolygon/polygon-edge/versioning.Branch=main'" \
     main.go
