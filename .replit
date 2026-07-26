@@ -5,3 +5,26 @@ channel = "stable-25_05"
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build polygon-edge"
+
+[[workflows.workflow]]
+name = "Build polygon-edge"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "GOPROXY=direct GONOSUMDB=* go build -o polygon-edge -ldflags=\"-X 'github.com/0xPolygon/polygon-edge/versioning.Version=v1.0.0' -X 'github.com/0xPolygon/polygon-edge/versioning.Branch=main'\" main.go && echo 'Build complete. Run ./polygon-edge --help to see commands.'"
+
+[workflows.workflow.metadata]
+outputType = "console"
