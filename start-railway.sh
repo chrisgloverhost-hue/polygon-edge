@@ -1,38 +1,37 @@
 #!/usr/bin/env bash
-# Fem Chain — 4-validator IBFT devnet
-# Node 1's JSON-RPC is exposed on :8080 (publicly reachable via Replit).
-# Gas price floor: 1 gwei (1000000000 wei)
+# Fem Chain — Railway deployment startup
+# Railway injects $PORT; we bind node 1's JSON-RPC to it.
 
 set -e
 
 BINARY="./polygon-edge"
 GENESIS="./genesis.json"
-BOOTNODE="/ip4/127.0.0.1/tcp/30301/p2p/16Uiu2HAm4WSy6yu6nyHyqFoaYSSy2EGCb97BV81LV3dvPFozXvsb"
+PORT="${PORT:-8080}"
 
-# Kill any previously running nodes
+# Kill any stale processes
 pkill -f "polygon-edge server" 2>/dev/null || true
 sleep 1
 
 echo "=============================="
-echo "  Starting Fem Chain Devnet"
+echo "  Fem Chain — Railway Deploy"
 echo "  Chain ID : 23124"
 echo "  Token    : FEM"
-echo "  Consensus: IBFT (4 validators)"
+echo "  JSON-RPC : 0.0.0.0:$PORT"
+echo "  Gas Price: 1 gwei minimum"
 echo "=============================="
 
-# Node 1 — JSON-RPC on :8080 (public)
-echo "[1/4] Starting validator 1 (JSON-RPC :8080)..."
+# Node 1 — JSON-RPC on $PORT (the only public port on Railway)
+echo "[1/4] Starting validator 1 (JSON-RPC :$PORT)..."
 $BINARY server \
   --data-dir ./fem-chain-1 \
   --chain $GENESIS \
   --grpc-address :10000 \
   --libp2p :30301 \
-  --jsonrpc 0.0.0.0:8080 \
+  --jsonrpc "0.0.0.0:$PORT" \
   --seal \
   --price-limit 1000000000 \
   --log-level INFO &
 NODE1_PID=$!
-echo "  PID: $NODE1_PID"
 
 sleep 3
 
@@ -47,7 +46,6 @@ $BINARY server \
   --seal \
   --price-limit 1000000000 \
   --log-level WARN &
-echo "  PID: $!"
 
 # Node 3
 echo "[3/4] Starting validator 3..."
@@ -60,7 +58,6 @@ $BINARY server \
   --seal \
   --price-limit 1000000000 \
   --log-level WARN &
-echo "  PID: $!"
 
 # Node 4
 echo "[4/4] Starting validator 4..."
@@ -73,22 +70,9 @@ $BINARY server \
   --seal \
   --price-limit 1000000000 \
   --log-level WARN &
-echo "  PID: $!"
 
 echo ""
-echo "=============================="
-echo "  Fem Chain is LIVE!"
-echo ""
-echo "  JSON-RPC : http://0.0.0.0:8080"
-echo "  Chain ID : 23124"
-echo "  Symbol   : FEM"
-echo ""
-echo "  MetaMask settings:"
-echo "    Network name : Fem"
-echo "    RPC URL      : https://<your-replit-url>-8080.replit.dev"
-echo "    Chain ID     : 23124"
-echo "    Currency sym : FEM"
+echo "  Fem Chain is LIVE on port $PORT"
 echo "=============================="
 
-# Keep alive — wait for node 1
 wait $NODE1_PID

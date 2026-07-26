@@ -32,7 +32,7 @@ bash start-fem-chain.sh
 | Currency       | FEM                            |
 | JSON-RPC       | `http://0.0.0.0:8080`         |
 | Block time     | ~2 seconds                     |
-| Gas price      | **0 wei** (free transactions)  |
+| Gas price      | **1 gwei** minimum (1,000,000,000 wei) |
 | Gas limit/block| 10,000,000                     |
 | Consensus      | IBFT PoA                       |
 

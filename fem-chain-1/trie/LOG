@@ -23,3 +23,15 @@
 02:05:07.911814 version@stat F·[1] S·585B[585B] Sc·[0.25]
 02:05:09.813895 db@janitor F·3 G·0
 02:05:09.814016 db@open done T·1.902431568s
+02:10:19.976181 db@close closing
+02:10:19.976365 db@close done T·183.456µs
+=============== Jul 26, 2026 (UTC) ===============
+02:10:21.165903 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:10:21.166262 version@stat F·[1] S·585B[585B] Sc·[0.25]
+02:10:21.166281 db@open opening
+02:10:21.166356 journal@recovery F·1
+02:10:21.166753 journal@recovery recovering @5
+02:10:21.170733 memdb@flush created L0@7 N·5 S·585B "$\x1f\xb0..\x1e\x1d\xfc,v9":"\xf0\xef8..\xbcY\xd7,v7"
+02:10:21.170954 version@stat F·[2] S·1KiB[1KiB] Sc·[0.50]
+02:10:21.181357 db@janitor F·4 G·0
+02:10:21.181422 db@open done T·15.099484ms
