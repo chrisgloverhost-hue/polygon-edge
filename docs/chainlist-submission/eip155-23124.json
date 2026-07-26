@@ -1,0 +1,25 @@
+{
+  "name": "Fem",
+  "chain": "FEM",
+  "icon": "fem",
+  "rpc": [
+    "https://rpc.fem.network",
+    "https://c4d9ef0b-304a-4da5-a638-60cfcdd740d2-00-4pcm9zksgwmp.spock.replit.dev"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "Fem",
+    "symbol": "FEM",
+    "decimals": 18
+  },
+  "infoURL": "https://fem.network",
+  "shortName": "fem",
+  "chainId": 23124,
+  "networkId": 23124,
+  "slip44": 60,
+  "explorers": [],
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ]
+}

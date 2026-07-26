@@ -69,4 +69,19 @@ bash start-fem-chain.sh
 
 Gas price is **0 wei** — transactions on Fem Chain are free. The chain does not use EIP-1559 base fees. The `burnContract` field in `genesis.json` is null, confirming no fee burning.
 
+## Mainnet readiness
+
+| Item | Status |
+|------|--------|
+| Chain running | ✅ Live |
+| Gas price floor | ✅ 1 gwei |
+| Public JSON-RPC (dev) | ✅ Port 80 |
+| Replit production publish | 🔲 Click Publish |
+| Chainlist.org submission | 🔲 See `docs/chainlist-submission/` |
+| External validators | 🔲 See `docs/validator-guide.md` |
+| Block explorer | 🔲 Not yet deployed |
+| Token listing (CoinGecko) | 🔲 Needs explorer + community |
+
+See `docs/mainnet-launch-checklist.md` for the full step-by-step plan.
+
 ## User preferences
