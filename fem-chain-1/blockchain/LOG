@@ -1,0 +1,18 @@
+=============== Jul 26, 2026 (UTC) ===============
+00:11:59.525579 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:11:59.531353 db@open opening
+00:11:59.532451 version@stat F·[] S·0B[] Sc·[]
+00:11:59.535750 db@janitor F·2 G·0
+00:11:59.535971 db@open done T·4.568504ms
+00:12:58.502493 db@close closing
+00:12:58.502677 db@close done T·185.233µs
+=============== Jul 26, 2026 (UTC) ===============
+00:12:59.676680 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:12:59.676773 version@stat F·[] S·0B[] Sc·[]
+00:12:59.676808 db@open opening
+00:12:59.676835 journal@recovery F·1
+00:12:59.678319 journal@recovery recovering @1
+00:12:59.682447 memdb@flush created L0@2 N·5 S·694B "c\x00\x00..\x00\x00\x00,v4":"onumber,v3"
+00:12:59.683170 version@stat F·[1] S·694B[694B] Sc·[0.25]
+00:12:59.691139 db@janitor F·3 G·0
+00:12:59.691196 db@open done T·14.38151ms

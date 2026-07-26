@@ -16,15 +16,20 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Build polygon-edge"
+args = "Fem Chain Devnet"
 
 [[workflows.workflow]]
-name = "Build polygon-edge"
+name = "Fem Chain Devnet"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "GOPROXY=direct GONOSUMDB=* go build -o polygon-edge -ldflags=\"-X 'github.com/0xPolygon/polygon-edge/versioning.Version=v1.0.0' -X 'github.com/0xPolygon/polygon-edge/versioning.Branch=main'\" main.go && echo 'Build complete. Run ./polygon-edge --help to see commands.'"
+args = "bash start-fem-chain.sh"
+waitForPort = 8080
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
