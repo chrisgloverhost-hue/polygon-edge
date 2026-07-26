@@ -1,0 +1,85 @@
+{
+    "name": "Fem",
+    "genesis": {
+        "nonce": "0x0000000000000000",
+        "timestamp": "0x0",
+        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000f90129f90120f84694e2c84f1a57151b1a22e0fbfb92542881ac95e8d7b0af3ae092d5fc552acad5573d973884c585707d3ee53ef0e0564970770f154ddbbe98a0a668ed3809fbc8270f984278d8f84694246bd0e7da038524f3341a9dfb874173b00bb437b0b89e2617ef9c5b559e48398515d33808668f925a7896caf586e3a24e82ea2c7b63fd713883e23d8feb97f6edd3927f5bf84694939b951c6cfdb409bdd2f67fe94b9fe94597273cb0945cb062e435b694552d6718484d1bbaacf57738c653a80106ac79ee4e8f43f6f2f05762adf47b85272e464f2b62d879f8469495c06222efc6463b8882cefad9bfb45025772fadb0859991eeef36b74d059d441918323fcc01a4c2da5f150a299ae55fe979c32e8e42a13fcf5e0b369fdd5702b4e7d5a4c480c28080c080",
+        "gasLimit": "0x989680",
+        "difficulty": "0x1",
+        "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "coinbase": "0x0000000000000000000000000000000000000000",
+        "alloc": {
+            "0x246Bd0e7Da038524F3341a9dfB874173b00BB437": {
+                "balance": "0xd3c21bcecceda1000000"
+            },
+            "0x939B951C6CFdB409BDD2f67Fe94b9Fe94597273c": {
+                "balance": "0xd3c21bcecceda1000000"
+            },
+            "0x95C06222EFc6463B8882cEFad9bfb45025772FAD": {
+                "balance": "0xd3c21bcecceda1000000"
+            },
+            "0xe2C84f1a57151b1a22e0fbfb92542881Ac95e8d7": {
+                "balance": "0xd3c21bcecceda1000000"
+            }
+        },
+        "number": "0x0",
+        "gasUsed": "0x70000",
+        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "baseFee": "0x0",
+        "baseFeeEM": "0x0",
+        "baseFeeChangeDenom": "0x0"
+    },
+    "params": {
+        "forks": {
+            "EIP150": {
+                "block": 0
+            },
+            "EIP155": {
+                "block": 0
+            },
+            "EIP158": {
+                "block": 0
+            },
+            "byzantium": {
+                "block": 0
+            },
+            "constantinople": {
+                "block": 0
+            },
+            "homestead": {
+                "block": 0
+            },
+            "istanbul": {
+                "block": 0
+            },
+            "londonfix": {
+                "block": 0
+            },
+            "petersburg": {
+                "block": 0
+            },
+            "quorumcalcalignment": {
+                "block": 0
+            },
+            "txHashWithType": {
+                "block": 0
+            }
+        },
+        "chainID": 23124,
+        "engine": {
+            "ibft": {
+                "blockTime": 2000000000,
+                "epochSize": 100000,
+                "type": "PoA",
+                "validator_type": "bls"
+            }
+        },
+        "blockGasTarget": 0,
+        "burnContract": null,
+        "burnContractDestinationAddress": "0x0000000000000000000000000000000000000000"
+    },
+    "bootnodes": [
+        "/ip4/127.0.0.1/tcp/30301/p2p/16Uiu2HAm4WSy6yu6nyHyqFoaYSSy2EGCb97BV81LV3dvPFozXvsb",
+        "/ip4/127.0.0.1/tcp/30302/p2p/16Uiu2HAm4hEzPgHiprdnU4a3iXtYKwgQSQHqwEpBL8653W2q8puq"
+    ]
+}
