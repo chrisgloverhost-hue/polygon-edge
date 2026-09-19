@@ -79,9 +79,9 @@
         "burnContractDestinationAddress": "0x0000000000000000000000000000000000000000"
     },
     "bootnodes": [
-        "/ip4/127.0.0.1/tcp/30301/p2p/16Uiu2HAmB7cKqQTVepTf9hCbT8hQoXMVARDdkZTFjAqHN5yuHLnH",
-        "/ip4/127.0.0.1/tcp/30302/p2p/16Uiu2HAm3d42kZdEChYiBw8WtcASS6h8xHc68aHKcLrgp1PqgG9W",
-        "/ip4/127.0.0.1/tcp/30303/p2p/16Uiu2HAkybt9SU2QWEnFppvPU1LVNLgaiq3ry4zVdfUQDWcWttgn",
-        "/ip4/127.0.0.1/tcp/30304/p2p/16Uiu2HAkvGSCZVVrXZmb3ssuXZdCjQy3vkWio4uWKsyJYoWz7jYT"
+        "/dns4/fem-validator-1.railway.internal/tcp/30301/p2p/16Uiu2HAmB7cKqQTVepTf9hCbT8hQoXMVARDdkZTFjAqHN5yuHLnH",
+        "/dns4/fem-validator-2.railway.internal/tcp/30302/p2p/16Uiu2HAm3d42kZdEChYiBw8WtcASS6h8xHc68aHKcLrgp1PqgG9W",
+        "/dns4/fem-validator-3.railway.internal/tcp/30303/p2p/16Uiu2HAkybt9SU2QWEnFppvPU1LVNLgaiq3ry4zVdfUQDWcWttgn",
+        "/dns4/fem-validator-4.railway.internal/tcp/30304/p2p/16Uiu2HAkvGSCZVVrXZmb3ssuXZdCjQy3vkWio4uWKsyJYoWz7jYT"
     ]
 }
