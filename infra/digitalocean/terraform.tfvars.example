@@ -1,0 +1,4 @@
+# Copy to terraform.tfvars locally. Never commit your actual token.
+digitalocean_token  = "set-via-TF_VAR_digitalocean_token-instead"
+ssh_key_fingerprint = "your-existing-digitalocean-ssh-key-fingerprint"
+admin_cidrs          = ["203.0.113.10/32"]

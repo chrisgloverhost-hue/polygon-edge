@@ -49,3 +49,9 @@ polygon-edge.exe
 
 # Local node databases and private validator/libp2p key material
 fem-chain-*/
+
+# Terraform state and local provider credentials
+infra/digitalocean/.terraform/
+infra/digitalocean/*.tfstate
+infra/digitalocean/*.tfstate.*
+infra/digitalocean/terraform.tfvars
