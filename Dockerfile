@@ -23,18 +23,14 @@ WORKDIR /app
 # Copy binary
 COPY --from=builder /app/polygon-edge ./polygon-edge
 
-# Copy chain data (pre-seeded validator dirs + genesis)
+# Copy shared chain genesis (validator data lives in the mounted /app/data volume)
 COPY genesis.json ./genesis.json
-COPY fem-chain-1  ./fem-chain-1
-COPY fem-chain-2  ./fem-chain-2
-COPY fem-chain-3  ./fem-chain-3
-COPY fem-chain-4  ./fem-chain-4
 
 # Copy startup script
-COPY start-railway.sh ./start-railway.sh
-RUN chmod +x ./start-railway.sh ./polygon-edge
+COPY start-validator.sh ./start-validator.sh
+RUN chmod +x ./start-validator.sh ./polygon-edge
 
 # Railway injects PORT; default to 8080 for local Docker runs
 EXPOSE 8080
 
-ENTRYPOINT ["bash", "start-railway.sh"]
+ENTRYPOINT ["bash", "start-validator.sh"]
