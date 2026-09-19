@@ -1,0 +1,31 @@
+{
+  "network": {
+    "name": "Fem Chain Mainnet",
+    "symbol": "FEM",
+    "decimals": 18,
+    "chainId": 23124,
+    "consensus": "ibft",
+    "validatorType": "bls",
+    "blockTimeSeconds": 2,
+    "blockGasLimit": 10000000,
+    "initialBridgeEnabled": false,
+    "fixedSupply": true
+  },
+  "allocations": [
+    { "bucket": "treasury", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 300000000, "multisig": "3-of-5", "policy": "24-month timelock" },
+    { "bucket": "ecosystem", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 200000000, "multisig": "3-of-5", "policy": "48-month program budget" },
+    { "bucket": "team", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 150000000, "multisig": "3-of-5", "policy": "12-month cliff; 36-month linear vesting" },
+    { "bucket": "validator-bootstrap", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 100000000, "multisig": "3-of-5", "policy": "48-month reward program" },
+    { "bucket": "community", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 100000000, "multisig": "3-of-5", "policy": "audited distribution only" },
+    { "bucket": "liquidity", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 100000000, "multisig": "3-of-5", "policy": "7-day announced transfers" },
+    { "bucket": "contingency-reserve", "address": "REPLACE_WITH_0x_ADDRESS", "amountFem": 50000000, "multisig": "3-of-5", "policy": "48-month timelock" }
+  ],
+  "governance": {
+    "ownerModel": "founder-controlled permissioned network",
+    "governanceMultisig": "REPLACE_WITH_PUBLIC_MULTISIG_ADDRESS",
+    "threshold": "3-of-5",
+    "timelockHours": 48,
+    "plannedUpgradeNoticeDays": 14,
+    "emergencyDisclosureHours": 48
+  }
+}

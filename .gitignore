@@ -1,0 +1,51 @@
+peers.json
+manifest.json
+secretsManagerConfig.json
+*-packr.go
+config*.json
+polygon-edge
+
+bin/
+
+test-chain*
+test-rootchain*
+polygon-edge-chain*
+.idea
+
+# Exclude the build .exe file from version control
+dist/
+main.exe
+main
+
+# MacOS Leftovers
+.DS_Store
+.vscode
+
+# exclude build folder
+artifacts
+node_modules
+
+# Log files
+*.log
+
+vendor/
+coverage.out
+
+# for the docs folder
+.code
+docs/site/
+docs/venv/
+docs/env/
+*.out
+node_modules/
+*.iml
+
+# Local Codex / Go build caches and disposable validator testnets
+.codex-go-cache/
+.codex-go-mod/
+.codex-artifacts/
+.fem-testnet-100/
+polygon-edge.exe
+
+# Local node databases and private validator/libp2p key material
+fem-chain-*/
