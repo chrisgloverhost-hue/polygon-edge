@@ -7,7 +7,7 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-if (-not $ConfirmDisposableTestnet) {
+if (-not $ConfirmDisposableTestnet) { 
     throw 'Refusing to run. Use -ConfirmDisposableTestnet; this creates 100 disposable local validators.'
 }
 
